@@ -1,20 +1,10 @@
-const express = require('express');
+const app = require('./app');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-const app = express();
-
-app.use(express.json());
-
-const PORT = process.env.PORT;
-
-// const PublicRoutes 
-// const PrivateRoutes 
-
-// app.use(PublicRoutes)
-// app.use(PrivateRoutes)
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}.`);
+    console.log(`Servidor rodando da porta ${PORT}.`);
 });
